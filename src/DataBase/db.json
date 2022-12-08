@@ -1,0 +1,12 @@
+{
+  "users": [
+    {
+      "username": "Gopala",
+      "mobile": "123456789",
+      "email": "Gopala@gmail.com",
+      "address": "Bihar",
+      "id": 1
+    }
+   
+  ]
+}
