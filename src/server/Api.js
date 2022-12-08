@@ -19,3 +19,26 @@ export const getUser = async () => {
     }
   };
   
+  export const getSingleUser = async (data) => {
+    try {
+     return await axios.get(`${URL_}/${data}`);
+    } catch (err) {
+      console.log("Errorn on getSingleUser", err.message);
+    }
+  };
+
+  export const editUser = async (data,id) => {
+    try {
+     return await axios.put(`${URL_}/${id}`,data);
+    } catch (err) {
+      console.log("Errorn on editUser", err.message);
+    }
+  };
+
+  export const deleteUser = async (id) => {
+    try {
+     return await axios.delete(`${URL_}/${id}`);
+    } catch (err) {
+      console.log("Errorn on deleteUser", err.message);
+    }
+  };

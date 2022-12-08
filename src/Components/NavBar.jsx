@@ -1,14 +1,15 @@
 import React from "react";
 import { AppBar, Toolbar, Typography, styled } from "@mui/material";
-import { AddUsers } from "./AddUsers";
-import { AllUsers } from "./AllUsers";
+import { NavLink } from "react-router-dom";
 
 const NavHead = styled(AppBar)`
   background: #0277bd;
 `;
-const Tab = styled(Toolbar)`
+const Tab = styled(NavLink)`
   font-size: 23px;
+  color: yellow;
   margin-left: 80px;
+  text-decoration: none;
 `;
 
 export const NavBar = () => {
@@ -16,14 +17,11 @@ export const NavBar = () => {
     <>
       <NavHead position="static">
       <Toolbar>
-        <Tab>Username</Tab>
-        <Tab>MobileNo</Tab>
-        <Tab>Email</Tab>
-        <Tab>Address</Tab>
+       
+        <Tab to="/">All User</Tab>
+        <Tab to="add">Add User</Tab>
       </Toolbar>
     </NavHead>
-    {/* <AddUsers/> */}
-    <AllUsers/>
     </>
    
   );

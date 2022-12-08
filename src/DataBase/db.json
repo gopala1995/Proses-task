@@ -1,12 +1,25 @@
 {
   "users": [
     {
-      "username": "Gopala",
-      "mobile": "123456789",
-      "email": "Gopala@gmail.com",
-      "address": "Bihar",
-      "id": 1
+      "username": "Raja",
+      "mobile": "12335789",
+      "email": "Raja@gmail.com",
+      "address": "Gujrat",
+      "id": 2
+    },
+    {
+      "username": "Pankaj Kumar",
+      "mobile": "56154987462646",
+      "email": "PankajTri@gamil.com",
+      "address": "Up",
+      "id": 3
+    },
+    {
+      "username": "Aman Anku",
+      "mobile": "545898525",
+      "email": "aman@gmai",
+      "address": "Saharsa",
+      "id": 4
     }
-   
   ]
 }

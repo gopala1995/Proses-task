@@ -9,6 +9,7 @@ import {
 } from "@mui/material";
 import React, { useState } from "react";
 import { AddUser } from "../server/Api";
+import { useNavigate } from "react-router-dom";
 
 const Form = styled(FormGroup)`
   width: 50%;
@@ -20,13 +21,14 @@ const Form = styled(FormGroup)`
 
 export const AddUsers = () => {
   const initial = {
-    name: "",
+    username: "",
     mobile: "",
     email: "",
     address: "",
   };
 
   const [user, setUser] = useState(initial);
+  const navigate = useNavigate()
 
   const onValueChange = (e) => {
     setUser({ ...user, [e.target.name]: e.target.value });
@@ -34,6 +36,7 @@ export const AddUsers = () => {
   };
   const addUser = async() => {
    await AddUser(user)
+   navigate("/")
   };
 
   return (
@@ -42,7 +45,7 @@ export const AddUsers = () => {
         <Typography varient="h4">Add User</Typography>
         <FormControl>
           <InputLabel>Name</InputLabel>
-          <Input name="name" onChange={(e) => onValueChange(e)} />
+          <Input name="username" onChange={(e) => onValueChange(e)} />
         </FormControl>
         <FormControl>
           <InputLabel>MobileNo</InputLabel>
